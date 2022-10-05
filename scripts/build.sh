@@ -1,4 +1,5 @@
-BUILD_DIR="bin"
+ROOT_DIR=$(pwd)
+BUILD_DIR="$ROOT_DIR/bin"
 
 
 run_nasm_linux_sample() {
@@ -7,7 +8,7 @@ run_nasm_linux_sample() {
 
   nasm -f elf $FILE_NAME.asm -o "$BUILD_DIR/$FILE_NAME.o"
   ld -m elf_i386 "$BUILD_DIR/$FILE_NAME.o" -o "$BUILD_DIR/$FILE_NAME"
-  "./$BUILD_DIR/$FILE_NAME"
+  "$BUILD_DIR/$FILE_NAME"
 }
 
 # Referências
