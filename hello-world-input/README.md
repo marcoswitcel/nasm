@@ -1,0 +1,1 @@
+Esse exemplo demonstra como requisitar memória não inicializada através da seção .bss
